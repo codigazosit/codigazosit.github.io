@@ -11282,6 +11282,10 @@ textarea.form-control-lg {
   background-image: url("./../assets/images/covers/info/contact/header-cover.png");
 }
 
+.code {
+  color: #000;
+}
+
 .social {
   font-size: 400%;
   margin: 2%;
