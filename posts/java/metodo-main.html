@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Post: Método main()" />
+    <meta name="author" content="codigazosit" />
+    <title>Método main() - Codigazos IT</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./../../assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./../../css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./../../index.html">Codigazos IT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./../../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/about.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Método main()</h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">Publicado el 14 de Septiembre, 2021</div>
+                        <!-- Post categories-->
+                        <a class="badge bg-secondary text-decoration-none link-light">Java</a>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/metodo-main/header-cover.png" alt="Método main" /></figure>
+                    <div class="text-muted fst-italic mb-4">Tiempo de lectura aproximado: 10 minutos.</div>
+
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">Todo programa en Java compienza por el método <b>main()</b>.</p>
+                        <p class="fs-5 mb-4">Cuando nosotros ejecutamos nuestros programas, el compilador de Java busca
+                            este método para comenzar a realizar las instrucciones que nosotros le indiquemos.</p>
+                        <p class="fs-5 mb-4">Sin embargo, para que pueda ser reconocido debe de contar con ciertas
+                            características que te explicaremos en este post.</p>
+                        <h2 class="fw-bolder mb-4 mt-5">Sintaxis del método main()</h2>
+                        <p class="fs-5 mb-4">Al igual que la declaración de los métodos en Java, debe de contar con un
+                            modificador de acceso, en este caso es public, siempre.</p>
+                        <p class="fs-5 mb-4">La razón es porque la JVM (que es la máquina virtual de Java, Java Virtual
+                            Machine), necesita tener visibilidad sobre el método main(), si tuviera algun otro
+                            modificador de acceso, simplemente no lo podría encontrar y por lo tanto no podría
+                            ejecutarlo.</p>
+                        <p class="fs-5 mb-4">Además, debe de ser <i>static</i>, porque no debe ser necesario crear una
+                            instancia de la clase en la que se encuentra definido para poder hacer uso del método.
+                        </p>
+                        <p class="fs-5 mb-4">El tipo de retorno es <i>void</i>, ya que al ser el método inicial no es
+                            necesario que se regrese algún valor, ya que nadie haría uso de él.</p>
+                        <p class="fs-5 mb-4">A pesar de que podamos colocar otro tipo de retorno, el compilador siempre
+                            buscará el que sea declarado con <i>void</i>, y si no lo encuentra, no se ejecutará.
+                            Veremos un ejemplo de esto más adelante.</p>
+
+                        <p class="fs-5 mb-4">Seguimos con el nombre del método, <i>main()</i>. Así, con minúsculas. En
+                            caso de nombrarlo como Main(), la JVM no lo va a encontrar.</p>
+
+                        <p class="fs-5 mb-4">El método main() recibe un <b>único parámetro</b>, un arreglo de String.
+                            Este arreglo recibe los argumentos que nosotros le pasemos cuando lo ejecutemos,
+                            generalmente es a través de la consola de comandos. Cuando no se envía nada, que es el caso
+                            más común, se recibe un arreglo vacío.</p>
+
+                        <p class="fs-5 mb-4">Entonces, el famoso método <i>main()</i>, se ve de la siguiente manera:</p>
+
+                        <p class="fs-5 mb-4">
+                            <code class="code">
+                                <p>public static void main(String[] args) {</p>
+                                <p>&nbsp;//Instrucciones</p>
+                                <p>}</p>
+                            </code>
+                        </p>
+
+                        <p class="fs-5 mb-4">Esta es la definición estándar del método.</p>
+
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Sin embargo...</h2>
+                        <p class="fs-5 mb-4">Existen algunas particularidades del método <i>main()</i> que debemos
+                            conocer, hay
+                            algunas variantes en la definición del método que en algunos casos podremos llegar a
+                            encontrarnos, como en exámenes de certificación de Oracle. Así que, toma nota.</p>
+                        <p class="fs-5 mb-4">
+                        <h4>El método <i>main()</i> también puede ser declarado como <b>final</b></h4>
+                        </p>
+                        <p class="fs-5 mb-4">
+                            <code class="code">
+                                <p>public static <b>final</b> void main(String[] args) {</p>
+                                <p>&nbsp;//Instrucciones</p>
+                                <p>}</p>
+                            </code>
+                        </p>
+
+                        <p class="fs-5 mb-4">Recordemos: Primero, que el uso de <i>final</i> en los métodos, elimina la
+                            posibilidad de que sean sobreescritos en las clases hijas.
+                        </p>
+                        <p class="fs-5 mb-4"> Segundo: Los métodos estáticos no
+                            pueden ser sobreescritos, <b>son redefinidos</b>, por lo tanto el uso de final en el método
+                            <i>main()</i>
+                            nos deja sin la posibilidad de que sea sobreescrito en alguna <i>subclase</i>.
+                        </p>
+                        <p class="fs-5 mb-4"> Algo que en el escenario más común jamás sucederá, ya que al ser el punto
+                            de partida de los programas en Java, es invocado por la JVM, y
+                            al ejecutarlo manualmente desde nuestro código terminaríamos en un ciclo infinito,
+                            provocando con un <i>StackOverflowError</i>.
+                        </p>
+                        <p class="fs-5 mb-4">La definición del método <i>main()</i> con <i>final</i> no tiene mayor
+                            impacto y
+                            es válido declarlo así, aunque realmente no es necesario.
+                        </p>
+
+                        <p class="fs-5 mb-4">
+                        <h4>El orden puede cambiar</h4>
+                        </p>
+                        <p class="fs-5 mb-4">
+                            <code class="code">
+                                <p><b>static final public</b> void main(<b>String args[]</b>) {</p>
+                                <p>&nbsp;//Instrucciones</p>
+                                <p>}</p>
+                            </code>
+                        </p>
+                        <p class="fs-5 mb-4">Las palabras reservadas <i>static, public y final</i> pueden estar en
+                            cualquier orden, siempre y cuando se encuentren antes del tipo de retorno <i>void</i>.
+                            A pesar de que pueda parecer que es incorrecto, es totalmente válido.
+                        </p>
+                        <p class="fs-5 mb-4">Como Java está basado en el lenguaje <i>C</i>, la declaración de los
+                            arreglos también puede realizarse así, colocando los corchetes después del nombre del
+                            arreglo, o como se definen en Java, seguido del tipo de dato. Ambas definiciones son
+                            aceptables.
+                        </p>
+
+                        <p class="fs-5 mb-4">
+                        <h4>El nombre del arreglo es indiferente</h4>
+                        </p>
+                        <p class="fs-5 mb-4">
+                            <code class="code">
+                                    <p>final static public void main(<b>String arguments[]</b>) {</p>
+                                    <p>&nbsp;//Instrucciones</p>
+                                    <p>}</p>
+                                </code>
+                        </p>
+                        <p class="fs-5 mb-4">El nombre del arreglo del método <i>main()</i> puede tener cualquier
+                            nombre. Lo que es realmente relevante para el compilador es que sea un arreglo de String y
+                            que sea el único argumento declarado.
+                        </p>
+
+                        <p class="fs-5 mb-4">
+                        <h4>Los argumentos variables también son válidos</h4>
+                        </p>
+                        <p class="fs-5 mb-4">
+                            <code class="code">
+                                        <p>public static void main(<b>String... arguments</b>) {</p>
+                                        <p>&nbsp;//Instrucciones</p>
+                                        <p>}</p>
+                                    </code>
+                        </p>
+                        <p class="fs-5 mb-4">El método <i>main()</i> también puede recibir argumentos variables en lugar
+                            de un arreglo.
+                            Ambas definiciones son permitidas, aunque el estándar es el arreglo de String.
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Conclusión</h2>
+                        <p class="fs-5 mb-4">
+                            El método <i>main()</i> es el punto de partida de las aplicaciones en Java, todas las
+                            instrucciones empiezan a partir de ese método, debe de ser <i>public</i>, <i>static</i> y el
+                            tipo de retorno <i>void</i>. Existen algunas variantes en la declaración
+                            del método que es importante conocer.
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bolder mb-4 mt-5">No olvides visitar nuestra cuenta de Instagram @codigazosit</h5>
+                        <p class="fs-5 mb-4">
+                            Te compartimos el post de este artículo por si tienes alguna duda o comentario.
+                        </p>
+                        <p class="fs-5 mb-4">
+                            <a href="https://www.instagram.com/p/CTh3iQ7noS7/">
+                                <figure class="mb-4">
+                                    <img class="img-fluid rounded"
+                                        src="./../../assets/images/posts/metodo-main/post-cover.jpeg"
+                                        alt="Instagram Post: Método main()">
+                                </figure>
+                            </a>
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">
+                            ¡Muchas gracias por tu visita!
+                        </p>
+                    </section>
+                </article>
+
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <!-- Search widget-->
+                <!--
+                <div class="card mb-4">
+                    <div class="card-header">Search</div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Enter search term..."
+                                aria-label="Enter search term..." aria-describedby="button-search" />
+                            <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Sitios externos</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://github.com/codigazosit/">GitHub</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Donaciones</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.buymeacoffee.com/codigazosit/">Buy Me a Coffee</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="./../../js/scripts.js"></script>
+</body>
+
+</html>
