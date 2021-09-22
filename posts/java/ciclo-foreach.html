@@ -72,13 +72,13 @@
                             en el
                             ciclo y acceder a cada elemento a través del índice, de la siguiente manera:
                         </p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                <p>for (int i = 0; i < <i>coleccion.length</i>; i++) {</p>
-                                <p>&nbsp;System.out.println("Elemento: " + coleccion[i]);</p>
-                                <p>}</p>
-                            </code>
-                        </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    for (int i = 0; i < <i>coleccion.length</i>; i++) {
+        System.out.println("Elemento: " + coleccion[i]);
+    }
+                            </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">Esta forma de hacerlo puede llegar a ser un poco engorros y difícil de
                             leer, y más cuando empezamos a crear ciclos anidados.</p>
 
@@ -87,13 +87,13 @@
                             habitual, ya que
                             también se declara con la <i>palabra reservada</i> <b>for.</b> Su sintaxis es la
                             siguiente:</p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                    <p>for ([TipoDeDato] <i>identificador</i>: coleccion) {</p>
-                                    <p>&nbsp;//Instrucciones</p>
-                                    <p>}</p>
-                            </code>
-                        </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    for ([TipoDeDato] <i>identificador</i>: coleccion) {
+        //Instrucciones
+    }
+                            </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">Donde <b>[TipoDeDato]</b> es, como su nombre lo dice, el tipo que contiene
                             la
                             colección que vamos a iterar. Por ejemplo, si es un arreglo de String, el tipo es String.
@@ -106,29 +106,28 @@
 
                         <p class="fs-5 mb-4">Como podrás darte cuenta, no estamos especificando ningún índice y tampoco
                             el número de iteraciones que hará el ciclo foreach. Veamos un ejemplo:</p>
-
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                    <p>Integer[] numerosPrimos = {2, 3, 5, 7, 9, 13};</p>
-                                    <p>for (Integer num : numerosPrimos) {</p>
-                                    <p>&nbsp;System.out.println("Elemento: " + num);</p>
-                                    <p>}</p>
-                            </code>
-                        </p>
-
+                        <div class="code-example">
+                            <pre><code class="code">
+    Integer[] numerosPrimos = {2, 3, 5, 7, 9, 13};
+    for (Integer num : numerosPrimos) {
+        System.out.println("Elemento: " + num);
+    }
+                            </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">Al ejecutarlo, tendremos como salida lo siguiente:</p>
 
-                        <p class="fs-5 mb-4">
-                            <samp class="code">
-                                <p>Elemento: 2</p>
-                                <p>Elemento: 3</p>
-                                <p>Elemento: 5</p>
-                                <p>Elemento: 7</p>
-                                <p>Elemento: 9</p>
-                                <p>Elemento: 13</p>
-                            </samp>
-                        </p>
-
+                        <div class="code-example">
+                            <pre>
+    <samp class="code">
+        Elemento: 2
+        Elemento: 3
+        Elemento: 5
+        Elemento: 7
+        Elemento: 9
+        Elemento: 13
+    </samp>
+                            </pre>
+                        </div>
 
                         <p class="fs-5 mb-4">El ciclo <i>foreach</i> automáticamente recorre toda la colección que le
                             indiquemos, y cada elemento será almacenado en <i>num</i> en cada iteración.</p>
@@ -165,29 +164,30 @@
                             Y la limitación más grande es que <b>no se pueden modificar los valores de los arreglos</b>
                             al hacer uso de foreach.
                         </p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                    <p>Integer[] numerosPrimos = {2, 3, 5, 7, 9, 13};</p>
-                                    <p>for (Integer num : numerosPrimos) {</p>
-                                    <p>&nbsp;if(num == 5) {</p>
-                                    <p>&nbsp;&nbsp;num = 99;</p>
-                                    <p>&nbsp;}</p>
-                                    <p>}</p>
-                            </code>
-                        </p>
-
+                        <div class="code-example">
+                            <pre><code class="code">
+    Integer[] numerosPrimos = {2, 3, 5, 7, 9, 13};
+    for (Integer num : numerosPrimos) {
+        if(num == 5) {
+            num = 99;
+        }
+    }
+                            </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">Al visualizar el contenido del arreglo, podremos notar que no hubieron
                             cambios en los valores. </p>
-                        <p class="fs-5 mb-4">
-                            <samp class="code">
-                                <p>Elemento: 2</p>
-                                <p>Elemento: 3</p>
-                                <p>Elemento: 5</p>
-                                <p>Elemento: 7</p>
-                                <p>Elemento: 9</p>
-                                <p>Elemento: 13</p>
-                            </samp>
-                        </p>
+                        <div class="code-example">
+                            <pre>
+    <samp class="code">
+        Elemento: 2
+        Elemento: 3
+        Elemento: 5
+        Elemento: 7
+        Elemento: 9
+        Elemento: 13
+    </samp>
+                        </pre>
+                        </div>
                         <p class="fs-5 mb-4">La razón es que la variable <i>num</i> del ciclo <i>foreach</i> no está
                             haciendo referencia a cada elemento del array. Por lo cual para modificarlo tendríamos que
                             hacer uso de un índice. (Que el <i>foreach</i> no tiene).
