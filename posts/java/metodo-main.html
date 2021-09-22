@@ -94,14 +94,13 @@
 
                         <p class="fs-5 mb-4">Entonces, el famoso método <i>main()</i>, se ve de la siguiente manera:</p>
 
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                <p>public static void main(String[] args) {</p>
-                                <p>&nbsp;//Instrucciones</p>
-                                <p>}</p>
-                            </code>
-                        </p>
-
+                        <div class="code-example">
+                            <pre><code class="code">
+    public static void main(String[] args) {
+        //Instrucciones
+    }
+                            </code> </pre>
+                        </div>
                         <p class="fs-5 mb-4">Esta es la definición estándar del método.</p>
 
                     </section>
@@ -115,13 +114,13 @@
                         <p class="fs-5 mb-4">
                         <h4>El método <i>main()</i> también puede ser declarado como <b>final</b></h4>
                         </p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                <p>public static <b>final</b> void main(String[] args) {</p>
-                                <p>&nbsp;//Instrucciones</p>
-                                <p>}</p>
-                            </code>
-                        </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    public static <b>final</b> void main(String[] args) {
+        //Instrucciones
+    }
+                            </code></pre>
+                        </div>
 
                         <p class="fs-5 mb-4">Recordemos: Primero, que el uso de <i>final</i> en los métodos, elimina la
                             posibilidad de que sean sobreescritos en las clases hijas.
@@ -144,13 +143,13 @@
                         <p class="fs-5 mb-4">
                         <h4>El orden puede cambiar</h4>
                         </p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                <p><b>static final public</b> void main(<b>String args[]</b>) {</p>
-                                <p>&nbsp;//Instrucciones</p>
-                                <p>}</p>
-                            </code>
-                        </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    <b>static final public</b> void main(<b>String args[]</b>) {
+        //Instrucciones
+    }
+                            </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">Las palabras reservadas <i>static, public y final</i> pueden estar en
                             cualquier orden, siempre y cuando se encuentren antes del tipo de retorno <i>void</i>.
                             A pesar de que pueda parecer que es incorrecto, es totalmente válido.
@@ -164,13 +163,13 @@
                         <p class="fs-5 mb-4">
                         <h4>El nombre del arreglo es indiferente</h4>
                         </p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                    <p>final static public void main(<b>String arguments[]</b>) {</p>
-                                    <p>&nbsp;//Instrucciones</p>
-                                    <p>}</p>
-                                </code>
-                        </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    final static public void main(<b>String arguments[]</b>) {
+        //Instrucciones
+    }
+                                </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">El nombre del arreglo del método <i>main()</i> puede tener cualquier
                             nombre. Lo que es realmente relevante para el compilador es que sea un arreglo de String y
                             que sea el único argumento declarado.
@@ -179,13 +178,13 @@
                         <p class="fs-5 mb-4">
                         <h4>Los argumentos variables también son válidos</h4>
                         </p>
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                        <p>public static void main(<b>String... arguments</b>) {</p>
-                                        <p>&nbsp;//Instrucciones</p>
-                                        <p>}</p>
-                                    </code>
-                        </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    public static void main(<b>String... arguments</b>) {
+        //Instrucciones
+    }
+                                    </code></pre>
+                        </div>
                         <p class="fs-5 mb-4">El método <i>main()</i> también puede recibir argumentos variables en lugar
                             de un arreglo.
                             Ambas definiciones son permitidas, aunque el estándar es el arreglo de String.
