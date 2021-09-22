@@ -11282,9 +11282,6 @@ textarea.form-control-lg {
   background-image: url("./../assets/images/covers/info/contact/header-cover.png");
 }
 
-.code {
-  color: #000;
-}
 
 .social {
   font-size: 400%;
@@ -11299,6 +11296,16 @@ textarea.form-control-lg {
  color: #C13584;
 }
 
-.github{
+.github {
 color: #333;
+}
+
+.code {
+  color: #000;
+  overflow-x: visible;
+  line-height: 22px;
+}
+
+.code-example{
+  background-color: #f9fafb;
 }

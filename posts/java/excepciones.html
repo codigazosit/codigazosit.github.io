@@ -11,6 +11,8 @@
     <link rel="icon" type="image/x-icon" href="./../../assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./../../css/styles.css" rel="stylesheet" />
+    <!-- Core theme JS-->
+    <script src="./../../js/scripts.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDMFWEHLSX"></script>
@@ -105,20 +107,22 @@
                             <b>try, catch y finally</b> en forma de bloque. La sintaxis es la siguiente:
                         </p>
 
-                        <p class="fs-5 mb-4">
-                            <code class="code">
-                                <p>try {</p>
-                                <p>&nbsp;// Bloque de instrucciones donde puede ocurrir el error.</p>
-                                <p>} catch(Exception ex1) {</p>
-                                <p>&nbsp;// Bloque de instrucciones para tratar el error.</p>
-                                <p>}</p>
-                                <p>} catch(Exception ex2) {</p>
-                                <p>&nbsp;// Bloque de instrucciones para tratar el error.</p>
-                                <p>} finally {</p>
-                                <p>&nbsp;// Bloque de instrucciones que será ejecutado cuando se origine o no alguna excepción.</p>
-                                <p>}</p>
-                            </code>
-                        </p>
+                        <div class="container-fluid">
+                            <p class="fs-5 mb-4">
+                                <code class="code">
+                                    <p>try {</p>
+                                    <p>&nbsp;// Bloque de instrucciones donde puede ocurrir el error.</p>
+                                    <p>} catch(Exception ex1) {</p>
+                                    <p>&nbsp;// Bloque de instrucciones para tratar el error.</p>
+                                    <p>}</p>
+                                    <p>} catch(Exception ex2) {</p>
+                                    <p>&nbsp;// Bloque de instrucciones para tratar el error.</p>
+                                    <p>} finally {</p>
+                                    <p>&nbsp;// Bloque de instrucciones que será ejecutado cuando se origine o no alguna excepción.</p>
+                                    <p>}</p>
+                                </code>
+                            </p>
+                        </div>
 
                         <p class="fs-5 mb-4">En el bloque <b><i>try {}</i></b> se colocará el código que al ejecutarse
                             pueda disparar algún tipo de <b>Exception</b>. Es decir, si queremos gestionar alguna
@@ -143,24 +147,27 @@
                         </p>
 
                         <h5 class="fw-c mb-4 mt-5">Ejemplo:</h5>
-
-                        <p class="fs-5 mb-4">
+                        <div class="code-example">
+                            <pre>
                             <code class="code">
-                                <p>public class Ejemplo {</p>
-                                <p>&nbsp;private static final Scanner sc = new Scanner(System.in);</p>
-                                <p>&nbsp;public static void main(String[] args) {</p>
-                                <p>&nbsp;&nbsp;System.out.println("*** Calcular la división de dos números ***");</p>
-                                <p>&nbsp;&nbsp;System.out.println("Ingresa el divisor (número entero): ");</p>
-                                <p>&nbsp;&nbsp;int divisor = sc.nextInt();</p>
-                                <p>&nbsp;&nbsp;System.out.println("Ingresa el dividendo (número entero): ");</p>
-                                <p>&nbsp;&nbsp;int dividendo = sc.nextInt();</p>
-                                <p>&nbsp;&nbsp;int resultado = divisor / dividendo;</p>
-                                <p>&nbsp;&nbsp;System.out.println("El resultado es: " + resultado);</p>
-                                <p>&nbsp;}</p>
-                                <p>}</p>
-                            </code>
-                        </p>
+    public class Ejemplo {
 
+        private static final Scanner sc = new Scanner(System.in);
+        
+        public static void main(String[] args) {
+            System.out.println("*** Calcular la división de dos números ***");
+            System.out.println("Ingresa el divisor (número entero): ");
+            int divisor = sc.nextInt();
+            System.out.println("Ingresa el dividendo (número entero): ");
+            int dividendo = sc.nextInt();
+            int resultado = divisor / dividendo;
+            System.out.println("El resultado es: " + resultado);
+        }
+    }
+                            </code>
+                            </pre>
+                        </div>
+                        </p>
                         <p class="fs-5 mb-4">
                             Para ejemplificar el uso del <i>try - catch - finally</i>, vamos a usar el código anterior.
                             Básicamente es un pequeño programa que realiza la división de dos números. El usuario tiene
@@ -335,8 +342,7 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="./../../js/scripts.js"></script>
+
 </body>
 
 </html>
