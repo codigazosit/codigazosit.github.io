@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Post: Arreglos" />
+    <meta name="author" content="codigazosit" />
+    <title>Arreglos - Codigazos IT</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./../../assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./../../css/styles.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDMFWEHLSX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RDMFWEHLSX');
+    </script>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./../../index.html">Codigazos IT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./../../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/about.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Arreglos</h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">Publicado el 26 de Septiembre, 2021</div>
+                        <!-- Post categories-->
+                        <a class="badge bg-secondary text-decoration-none link-light">Java</a>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/java/arreglos/header-cover.png" alt="Excepciones" />
+                    </figure>
+                    <div class="text-muted fst-italic mb-4">Tiempo de lectura aproximado: 15 minutos.</div>
+
+                    <!-- Introduction-->
+                    <section class="mb-5">
+                        En este artículo vamos a hablar sobre qué son los arreglos, cómo funcionan y de qué manera
+                        podemos utilizarlos en Java.
+                    </section>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">Las excepciones son eventos inesperados que ocurren en las aplicaciones
+                            cuando alguna función ha generado un error, lo que provoca la detención de la aplicación o
+                            algún flujo inadecuado.</i> </p>
+                        <p class="fs-5 mb-4"><b>Estas excepciones ocurren en tiempo de ejecución.</b> Sin embargo,
+                            pueden ser gestionadas gracias al <i>manejo de excepciones de Java</i>, que nos permite
+                            tratarlas cuando ocurran.
+                        </p>
+                        <h3 class="fw-bolder mb-4 mt-5">Jerarquía de excepciones</h3>
+                        <p class="fs-5 mb-4">Todas las excepciones son representadas por clases. El JDK de Java provee
+                            una clase llamada Throwable, por lo tanto cuando ocurre una excepción, será de tipo
+                            Throwable.
+                        </p>
+                        <p class="fs-5 mb-4">
+                            Existen dos clases que heredan directamente de Throwable, la clase <b><i>Exception</i></b> y
+                            <b><i>Error</i></b>. Todas las excepciones que sean de tipo <i>Error</i> son provocadas por
+                            la JVM y no están directamente relacionadas con tu programa, por lo tanto no son excepciones
+                            que puedan ser gestionadas directamente.
+                        </p>
+
+                        <p class="fs-5 mb-4">
+                            Sin embargo, todas las excepciones que sean de tipo <b>Exception</b> son provocadas por las
+                            aplicaciones y deben ser tratadas (o evitadas). Algunas muy comunes son:
+                            <i>NullPointerException,
+                                ArrayIndexOutOfBoundsException, IOException,</i> entre muchas otras.
+                        </p>
+                        <h4 class="fw-c mb-4 mt-5">¿Cómo gestionar las excepciones?</h4>
+
+                        <p class="fs-5 mb-4">Java nos proporciona un pequeño conjunto de <i>palabras reservadas</i> con
+                            el cual podemos manejar las excepciones. Estas son: <b>try, catch y finally.</b></p>
+
+                        <h5 class="fw-c mb-4 mt-5">Manejar una excepción</h5>
+
+
+                        <p class="fs-5 mb-4">Cuando puede ocurrir una excepción en tiempo de ejecución haremos uso de
+                            <b>try, catch y finally</b> en forma de bloque. La sintaxis es la siguiente:
+                        </p>
+
+                        <div class="code-example">
+                            <pre>
+                                <code class="code">
+    try {
+        // Bloque de instrucciones donde puede ocurrir el error.
+    } catch(Exception ex1) {
+        // Bloque de instrucciones para tratar el error.
+    }
+    } catch(Exception ex2) {
+        // Bloque de instrucciones para tratar el error.
+    } finally {
+        // Bloque de instrucciones que será ejecutado cuando se origine o no alguna excepción.
+    }
+                                </code></pre>
+                        </div>
+
+                        <p class="fs-5 mb-4">En el bloque <b><i>try {}</i></b> se colocará el código que al ejecutarse
+                            pueda disparar algún tipo de <b>Exception</b>. Es decir, si queremos gestionar alguna
+                            excepción debemos de incluir dentro de este bloque las instrucciones que puedan
+                            <i>dispararla</i>. Esta será gestionada en algún bloque <i>catch</i> definido
+                            posteriormente.
+                        </p>
+
+                        <p class="fs-5 mb-4">Recordemos que hay muchos tipos de excepciones, cada clase que herede de
+                            <i>Exception</i> es una de ellas. Por lo tanto cada bloque <b><i>catch (Exception
+                                    ex)</i></b> atrapa una y la gestiona de manera diferente dentro de su bloque.
+                        </p>
+
+                        <p class="fs-5 mb-4">Si una excepción es atrapada durante la ejecución del programa, los demás
+                            bloques <i><b>catch ya no serán ejecutados.</b></i>
+                        </p>
+
+                        <p class="fs-5 mb-4">
+                            Además existe el bloque <i><b>finally</b></i>. En él se escribirán las instrucciones que se
+                            deben de ejecutar <b>se origine una excepción de cualquier tipo o cuando no ocurra
+                                ninguna.</b> Esta parte del bloque es opcional.
+                        </p>
+
+                        <h5 class="fw-c mb-4 mt-5">Ejemplo:</h5>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    public class Ejemplo {
+
+        private static final Scanner sc = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            System.out.println("*** Calcular la división de dos números ***");
+            System.out.println("Ingresa el divisor (número entero): ");
+            int divisor = sc.nextInt();
+            System.out.println("Ingresa el dividendo (número entero): ");
+            int dividendo = sc.nextInt();
+            int resultado = divisor / dividendo;
+            System.out.println("El resultado es: " + resultado);
+        }
+    }
+                            </code>
+                            </pre>
+                        </div>
+                        </p>
+                        <p class="fs-5 mb-4">
+                            Para ejemplificar el uso del <i>try - catch - finally</i>, vamos a usar el código anterior.
+                            Básicamente es un pequeño programa que realiza la división de dos números. El usuario tiene
+                            que ingresar los números que quiere dividir y el programa lo resolverá y mostrará el
+                            resultado. Aquí hay dos excepciones que pueden ser detonadas: La primera es un
+                            <i><b>InputMismatchException</b></i>, debido a que en la entrada de los números por parte
+                            del usuario se podría ingresar algún caracter que no sea numérico. Y la segunda: Un
+                            <i><b>ArithmeticException</b></i>, cuando en el valor del dividendo ingresen el valor de
+                            cero. <i>Te recomendamos realizar la prueba.</i>
+                        </p>
+
+                        <p class="fs-5 mb-4">
+                            Entonces para manejar esos errores que podrían ocurrir <i>en tiempo de ejecución</i>,
+                            modificaremos el código anterior incluyendo el <i>try - catch - finally.</i>
+                        </p>
+
+                        <h5 class="fw-c mb-4 mt-5">Ejemplo incluyendo manejo de excepciones:</h5>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    public class Ejemplo {</p>
+        private static final Scanner sc = new Scanner(System.in);
+        public static void main(String[] args) {
+            System.out.println("*** Calcular la división de dos números ***");
+            try {
+                System.out.println("Ingresa el divisor (número entero): ");
+                int divisor = sc.nextInt();
+                System.out.println("Ingresa el dividendo (número entero): ");
+                int dividendo = sc.nextInt();
+                int resultado = divisor / dividendo;
+                System.out.println("El resultado es: " + resultado);
+            } catch(ArithmeticException ex) {
+                System.out.println("No es posible dividir sobre cero.");
+            } catch(InputMismatchException ex) {
+                System.out.println("Los valores ingresados deben ser números.");
+            } finally {
+                System.out.println("Gracias por visitar @codigazosit.");
+            }
+        }
+    }
+                            </code>
+                        </pre>
+                        </div>
+                        <p class="fs-5 mb-4">
+                            Como podrás notar, hemos incluido los bloques para cada excepción que pueda ocurrir en el
+                            programa y le mostramos un mensaje diferente en cada caso al usuario. De esta manera la
+                            aplicación no termina debido al error y puede continuar con el flujo habitual. También
+                            podrás darte cuenta del mensaje en el bloque <i>finally</i> se ejecuta cuando cualquiera de
+                            las dos excepciones ocurre y cuando la ejecución fluye con éxito. </p>
+
+                        <h5 class="fw-c mb-4 mt-5">Ejemplo con Exception</h5>
+
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    public class Ejemplo {</p>
+        private static final Scanner sc = new Scanner(System.in);
+        public static void main(String[] args) {
+            System.out.println("*** Calcular la división de dos números ***");
+            try {
+                System.out.println("Ingresa el divisor (número entero): ");
+                int divisor = sc.nextInt();
+                System.out.println("Ingresa el dividendo (número entero): ");
+                int dividendo = sc.nextInt();
+                int resultado = divisor / dividendo;
+                System.out.println("El resultado es: " + resultado);
+            } catch(Exception ex) {
+                System.out.println("Error en la ejecución.");
+            } finally {
+                System.out.println("Gracias por visitar @codigazosit.");
+            }
+        }
+    }
+                            </code>
+                        </pre>
+                        </div>
+                        <p class="fs-5 mb-4">
+                            Si no es necesario darle un tratamiento para cada tipo de excepción, podemos incluir en el
+                            bloque <i>catch</i> la clase <b>Exception</b> <i>(Que es la clase de la cual heredan todas
+                                las excepciones).</i> Cuando hacemos esto cualquier excepción que se origine caerá
+                            en este bloque de código.
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Conclusión</h2>
+                        <p class="fs-5 mb-4">
+                            Con el manejo de excepciones tenemos la posibilidad de manejar los errores que puedan
+                            ocurrir al momento de ejecutar nuestros programas para evitar que se detengan, además de que
+                            gracias a esto, las aplicaciones son más tolerantes a fallas y muestran un mejor
+                            comportamiento hacia los usuarios.
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h6 class="fw-bolder mb-4 mt-5">El código lo podrás encontrar en nuestro <a
+                                href="https://github.com/codigazosit/arreglos">repositorio
+                                de GitHub</a></h6>
+
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bolder mb-4 mt-5">No olvides visitar nuestra cuenta de Instagram <a
+                                href="https://www.instagram.com/codigazosit/">@codigazosit</a></h5>
+                        <p class="fs-5 mb-4">
+                            Te compartimos algunos posts de este artículo por si tienes alguna duda o comentario.
+                        </p>
+
+                        <div class="container">
+                            <div class="row justify-content-around">
+                                <!-- Instagram post 1 -->
+                                <div class="col-lg-6">
+                                    <a href="https://www.instagram.com/p/CTIs2CWHPpz/">
+                                        <figure class="mb-4">
+                                            <img class="img-fluid rounded"
+                                                src="./../../assets/images/posts/java/arreglos/post-cover-1.jpg"
+                                                alt="Instagram Post: Arreglos #1: Definición">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- Instagram post 2 -->
+                                <div class="col-lg-6">
+                                    <a href="https://www.instagram.com/p/CTK2UEwnhYm/">
+                                        <figure class="mb-4">
+                                            <img class="img-fluid rounded"
+                                                src="./../../assets/images/posts/java/arreglos/post-cover-2.jpg"
+                                                alt="Instagram Post: Arreglos #2: Creación">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around">
+                                <!-- Instagram post 3 -->
+                                <div class="col-lg-6">
+                                    <a href="https://www.instagram.com/p/CTOOnG0HMcg/">
+                                        <figure class="mb-4">
+                                            <img class="img-fluid rounded"
+                                                src="./../../assets/images/posts/java/arreglos/post-cover-3.jpg"
+                                                alt="Instagram Post: Arreglos #3: Lectura">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- Instagram post 4 -->
+                                <div class="col-lg-6">
+                                    <a href="https://www.instagram.com/p/CTe9RAcnOyP/">
+                                        <figure class="mb-4">
+                                            <img class="img-fluid rounded"
+                                                src="./../../assets/images/posts/java/arreglos/post-cover-4.jpg"
+                                                alt="Instagram Post: Arreglos #4: Modificación">
+                                        </figure>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around">
+                                <!-- Instagram post 5 -->
+                                <div class="col-lg-6">
+                                    <a href="https://www.instagram.com/p/CTqXObLLIeA/">
+                                        <figure class="mb-4">
+                                            <img class="img-fluid rounded"
+                                                src="./../../assets/images/posts/java/arreglos/post-cover-5.jpg"
+                                                alt="Instagram Post: Arreglos #5: Iteración">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <!-- DIV VACÍO PARA APLICAR ALINEACIÓN. -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">
+                            ¡Muchas gracias por tu visita!
+                        </p>
+                    </section>
+                </article>
+
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Sitios externos</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://github.com/codigazosit/">GitHub</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Donaciones</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.buymeacoffee.com/codigazosit/">Buy Me a Coffee</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Codigazos IT 2021</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
