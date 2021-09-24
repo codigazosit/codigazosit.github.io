@@ -68,25 +68,27 @@
                     </section>
                     <!-- Post content-->
                     <section class="mb-5">
-                        <p class="fs-5 mb-4">Los arreglos son una estructura de datos compuesta y estática que nos
+                        <p class="fs-5 mb-4">Los arreglos son una <b>estructura de datos compuesta</b> que nos
                             permite almacenar un conjunto de datos con la condición de que todos sean del mismo tipo. Si
                             creamos un arreglo de tipo <i>String</i>, únicamente podremos agregar valores de tipo
-                            String.</i>
+                            <i>String.</i>
                         </p>
-                        <p class="fs-5 mb-4">Estos pueden tener varias dimensiones, cuando son unidimensionales
-                            también son conocidos como vectores, los bidimencionales se les conoce como matrices y
-                            los multidimensionales.
+                        <p class="fs-5 mb-4">Estos pueden tener varias dimensiones, cuando son <i>unidimensionales</i>
+                            son conocidos como vectores, los <i>bidimencionales</i>, que también se les conoce como
+                            matrices y
+                            los <i>multidimensionales, de tres dimensiones o más</i>.
                         </p>
-                        <p class="fs-5 mb-4">Es posible crear arreglos de cualquier dimensión de cualquier tipo de
-                            dato, ya sean primitivos o compuestos. Incluso podemos hacer combinaciones de ellos
-                            gracias al polimorfismo.
+                        <p class="fs-5 mb-4">Es posible crear arreglos de cualquier dimensión y de cualquier tipo de
+                            dato, ya sean <i>primitivos o compuestos</i>. Incluso podemos hacer combinaciones de ellos
+                            gracias al <i>polimorfismo</i>.
                         </p>
                         <h3 class="fw-bolder mb-4 mt-5">Representación gráfica</h3>
                         <p class="fs-5 mb-4">Una de las maneras más comunes de representar a los arreglos
                             unidimensionales es con un tren. Como sabemos, un tren tiene vagones y en cada vagón hay un
-                            contenido. Bueno pues en los arreglos es muy similar, el tamaño está determinado por la
-                            cantidad de elementos (vagones) que puede almacenar, es el espacio reservado para los datos.
-                            Y el contenido es el valor en sí que estamos guardando.
+                            contenido. Bueno, pues en los arreglos es muy similar, el tamaño está determinado por la
+                            cantidad de elementos <i>(vagones)</i> que puede almacenar, estos son el espacio reservado
+                            para los datos.
+                            Y el contenido es el valor en sí que estamos guardando en cada vagón.
 
                         <figure class="mb-4"><img class="img-fluid rounded"
                                 src="./../../assets/images/posts/java/arreglos/content-image-1.png"
@@ -96,7 +98,7 @@
 
                         <p class="fs-5 mb-4">
                             Como podemos ver en la imagen, cada vagón es la representación de una celda de nuestro
-                            arreglo, y un arreglo puede tener N celdas. Recordemos que cada dato que guardemos se
+                            arreglo, y un arreglo puede tener <i>N</i> celdas. Cada dato que guardemos se
                             almacena en una celda en particular.
                         </p>
 
@@ -109,24 +111,35 @@
                         <h5 class="fw-c mb-4 mt-5">¿Para qué sirven?</h5>
 
                         <p class="fs-5 mb-4">Los arreglos se utilizan para muchas cosas y dependenderá del problema que
-                            estemos resolviendo. Podemos hacer un arreglo de calificaciones de los alumnos, arreglos de
-                            los nombres de animales salvajes o domésticos, de productos de tiendas departamentales, etc.
+                            estemos resolviendo. Podemos hacer un arreglo de enteros para las calificaciones de los
+                            alumnos, arreglos de cadenas de caracteres para los nombres de animales salvajes o
+                            domésticos, otro de productos de tiendas departamentales, etc.
                             Las posibilidades son infinitas.</p>
 
                         <h5 class="fw-c mb-4 mt-5">¿Por qué utilizarlos?</h5>
 
-                        <p class="fs-5 mb-4">Para crear un arreglo, necesitamos principalmente conocer 3 cosas: La
-                            cantidad de datos que queramos almacenar, el tipo de dato de la información que guardemos y
-                            si tenemos previamente los datos que vamos a guardar.
-                        </p>
-
-                        <p class="fs-5 mb-4">En Java existen dos maneras de crear los arreglos, la primera es definiendo
-                            los datos que va a contener y la segunda, definiendo la cantidad de datos que pueda
-                            almacenar.
+                        <p class="fs-5 mb-4">Dado que los arreglos son un tipo de dato compuesto, tenemos la posibilidad
+                            de tener información estructurada y agrupada que esté relacionada entre sí. De esta forma
+                            mejoramos nuestro código, es más entendible y es más fácil darle un tratamiento y un
+                            uso a la información contenida.
                         </p>
 
                         <section class="mb-5">
                             <h3 class="fw-c mb-4 mt-5">Creación de arreglos</h3>
+
+
+                            <p class="fs-5 mb-4">Para crear un arreglo, necesitamos principalmente conocer 3 cosas: La
+                                <b>cantidad de datos</b> que queramos almacenar, el <b>tipo de dato</b> de la
+                                información que
+                                guardemos y si tenemos previamente <b>los datos</b> que vamos a guardar.
+                            </p>
+
+                            <p class="fs-5 mb-4">En Java existen dos maneras de crear los arreglos, la primera es
+                                definiendo
+                                los datos que va a contener y la segunda, definiendo la cantidad de datos que pueda
+                                almacenar.
+                            </p>
+
                             <h5 class="fw-c mb-4 mt-5">Arreglos literales</h5>
 
                             <p class="fs-5 mb-4">Empecemos creando un arreglo con los datos que contendrá. </p>
@@ -139,18 +152,18 @@
                             </div>
 
                             <p class="fs-5 mb-4">
-                                Podemos notar que el arreglo es de tipo Character, por lo tanto solamente puede
+                                Podemos notar que el arreglo es de tipo <b>Character</b>, por lo tanto solamente puede
                                 almacenar datos que sean del mismo tipo. Seguido del tipo de dato, están unos corchetes
-                                [] que sirven para indicar que se trata de un arreglo de una dimensión. Posteriormente
+                                <i>[]</i> que sirven para indicar que se trata de un arreglo de una dimensión. Posteriormente,
                                 sigue el nombre
-                                con el cual vamos a identificar al vector, en este caso se llama vocales. Y como este es
-                                un arreglo literal debido a que ya conocemos los valores a almacenar, estos tienen que
-                                ser definidos posterior al operador de asignación y entre llaves (respetando el tipo de
+                                con el cual vamos a identificar al vector, en este caso se llama <i>vocales</i>. Y como este es
+                                un arreglo literal, debido a que ya conocemos los valores a almacenar, estos tienen que
+                                ser definidos posteriormente al operador de asignación y entre llaves (respetando el tipo de
                                 dato).
                             </p>
 
-                            <p class="fs-5 mb-4">Recordemos que son una estructura de datos estática, por lo tanto si
-                                posteriormente queremos cambiar el tamaño por uno más grande o pequeño, no será posible
+                            <p class="fs-5 mb-4">Dado que son una estructura de datos de <b>tamaño fijo</b>, si
+                                posteriormente queremos cambiar el tamaño del arreglo por uno más grande o pequeño, <b>no será posible</b>
                                 y tendremos que crear uno nuevo.
                             </p>
 
@@ -164,11 +177,11 @@
 
                             </p>
                             <p class="fs-5 mb-4">
-                                Con esto hemos creado un arreglo estático de 5 elementos de tipo char. El tamaño fue
+                                Con esto hemos creado un arreglo de 5 elementos de tipo <i>Character</i>. El tamaño fue
                                 definido implícitamente al especificar los datos que contiene. En la imagen
                                 aparecen las posiciones del arreglo que utilizaremos para acceder a los datos. (Más
-                                adelante veremos cómo hacerlo). Verás que la posición cero del arreglo vocales
-                                almacena el valor 'a'. Y así sucesivamente.
+                                adelante veremos cómo hacerlo). Observa que la posición cero del arreglo <i>vocales</i>
+                                almacena el valor <i>a</i>. Y así sucesivamente.
                             </p>
 
                             <h5 class="fw-c mb-4 mt-5">Arreglos por tamaño</h5>
@@ -185,13 +198,13 @@
 
                             <p class="fs-5 mb-4">
                                 Ahora hemos creado un arreglo de una dimensión que puede almacenar hasta 5 valores de
-                                tipo String. Al hacerlo de esta forma es necesario utilizar la palabra reservada new y
+                                tipo String. Al hacerlo de esta forma es necesario utilizar la palabra reservada <i>new</i> y
                                 especificar el tipo de dato del arreglo seguido de la cantidad de elementos a almacenar
                                 entre corchetes.
                             </p>
 
                             <p class="fs-5 mb-4">
-                                Al crear arreglos de esta forma, una representación gráfica podría verse asi:
+                                Al crearlos de esta manera, una representación gráfica podría verse así:
                             <figure class="mb-4"><img class="img-fluid rounded"
                                     src="./../../assets/images/posts/java/arreglos/content-image-3.png"
                                     alt="Representación de un arreglo de 5 espacios." />
@@ -199,13 +212,13 @@
                             </p>
 
                             <p class="fs-5 mb-4">
-                                Ahora el arreglo creado únicamente tiene el espacio reservado para almacenar valores de
+                                Ahora, el arreglo creado únicamente tiene el espacio reservado para almacenar valores de
                                 tipo String, pero no hay ningún dato en las posiciones del arreglo.
                             </p>
 
                             <p class="fs-5 mb-4">
                                 <i>
-                                    Nota importante: Los valores en cada celda son definidos por los valores por defecto
+                                    <b>Nota importante:</b> Los valores en cada celda son definidos por los valores por defecto
                                     del tipo de dato, en el caso de los tipos primitivos cada uno tiene un valor en
                                     particular y para objetos siempre será null.
                                 </i>
@@ -224,7 +237,7 @@
                                 especificar la posición de la celda a la cual queremos acceder.
                             </p>
                             <p class="fs-5 mb-4">
-                                Usaremos como ejemplo el siguiente arreglo literal de int.
+                                Usaremos como ejemplo el siguiente arreglo literal de tipo <i>int.</i>
                             </p>
                             <div class="code-example">
                                 <pre>
@@ -234,7 +247,7 @@
                             </div>
                             <p class="fs-5 mb-4">
                                 Dado que las posiciones comienzan en cero, para acceder al primer valor del arreglo de
-                                numerosPrimos, basta con especificar la posición y tendremos como respuesta el valor
+                                <i>numerosPrimos</i>, basta con especificar la posición y tendremos como respuesta el valor
                                 contenido.
                             </p>
                             <div class="code-example">
@@ -245,7 +258,7 @@
                             </div>
                             <p class="fs-5 mb-4">
                                 En el código anterior, estamos obteniendo el valor de la posición cero del arreglo
-                                numerosPrimos y lo estamos guardando en la variable primerElemento, si imprimimos el
+                                <i>numerosPrimos</i> y lo estamos guardando en la variable <i>primerElemento</i>, si imprimimos el
                                 valor en consola, veremos que tenemos el número dos. También podemos hacerlo sin
                                 necesidad de almacenarlo en una variable.
                             </p>
@@ -270,7 +283,7 @@
                             <p class="fs-5 mb-4">
                                 Así podremos obtener los valores almacenados en las diferentes posiciones de nuestro
                                 arreglo, hay que tener cuidado de que la posición que especifiquemos realmente exista, o
-                                tendremos como resultado una excepción de tipo ArrayIndexOutOfBoundsException.
+                                tendremos como resultado una excepción de tipo <i><b>ArrayIndexOutOfBoundsException.</b></i>
                             </p>
                         </section>
 
@@ -279,7 +292,7 @@
                             <p class="fs-5 mb-4">
                                 La modificación de los arreglos, consiste en alterar la información almacenada en las
                                 diversas posiciones que contenga. El tamaño del arreglo que fue establecido al momento
-                                de su creación no puede ser modificado.
+                                de su creación <b>no puede ser modificado.</b>
                             </p>
 
                             <p class="fs-5 mb-4">
@@ -294,7 +307,7 @@
 
                             <p class="fs-5 mb-4">
                                 Vamos a modificar el dato que contiene la celda en la posición 2 del arreglo.
-                                Actualmente vocales[2] contiene el valor 'i', lo cambiaremos por 'x'.
+                                Actualmente vocales[2] contiene el valor 'i', pero lo cambiaremos por 'x'.
                             </p>
                             <div class="code-example">
                                 <pre>
@@ -366,10 +379,10 @@
                             </div>
 
                             <p class="fs-5 mb-4">
-                                En el ciclo for estamos inicializando la variable i con el valor de cero, para empezar
-                                en la primer posición del arreglo, las iteraciones terminarán mientras i sea menor a la
-                                longitud del arreglo, este valor es el tamaño con el que lo creamos, en este caso es 5,
-                                por lo tanto el ciclo terminará cuando el valor de i ya no cumpla esa condición. Y el
+                                En el ciclo <i>for</i> estamos inicializando la variable <i>i</i> con el valor de cero, para empezar
+                                en la primer posición del arreglo, las iteraciones continuarán mientras <i>i</i> sea menor a la
+                                longitud del arreglo, este valor es el tamaño con el que lo creamos, en este caso es 5, porque tiene 5 elementos,
+                                por lo tanto el ciclo terminará cuando el valor de <i>i</i> ya no cumpla esa condición. Y el
                                 incremento va de uno en uno. De esta forma recorremos completamente el arreglo e
                                 imprimimos su valor en consola.
                             </p>
