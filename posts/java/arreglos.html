@@ -126,7 +126,7 @@
                         </p>
 
                         <section class="mb-5">
-                            <h3 class="fw-c mb-4 mt-5">¿Cómo crear arreglos?</h3>
+                            <h3 class="fw-c mb-4 mt-5">Creación de arreglos</h3>
                             <h5 class="fw-c mb-4 mt-5">Arreglos literales</h5>
 
                             <p class="fs-5 mb-4">Empecemos creando un arreglo con los datos que contendrá. </p>
@@ -210,27 +210,180 @@
                                     particular y para objetos siempre será null.
                                 </i>
                             </p>
+
+                            <p class="fs-5 mb-4">
+                                Bien, ya sabemos cómo podemos crear nuestros arreglos. ¿Ahora cómo podemos acceder a la
+                                información almacenada?
+                            </p>
+
+                        </section>
+                        <section class="mb-5">
+                            <h3 class="fw-c mb-4 mt-5">Lectura de Arreglos</h3>
+                            <p class="fs-5 mb-4">
+                                Como lo hemos mencionado anteriormente, para acceder a los datos almacenados, debemos de
+                                especificar la posición de la celda a la cual queremos acceder.
+                            </p>
+                            <p class="fs-5 mb-4">
+                                Usaremos como ejemplo el siguiente arreglo literal de int.
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    int[] numerosPrimos = {2, 3, 5, 7, 11, 13};
+                                </code></pre>
+                            </div>
+                            <p class="fs-5 mb-4">
+                                Dado que las posiciones comienzan en cero, para acceder al primer valor del arreglo de
+                                numerosPrimos, basta con especificar la posición y tendremos como respuesta el valor
+                                contenido.
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    int primerElemento = numerosPrimos[0];
+                                </code></pre>
+                            </div>
+                            <p class="fs-5 mb-4">
+                                En el código anterior, estamos obteniendo el valor de la posición cero del arreglo
+                                numerosPrimos y lo estamos guardando en la variable primerElemento, si imprimimos el
+                                valor en consola, veremos que tenemos el número dos. También podemos hacerlo sin
+                                necesidad de almacenarlo en una variable.
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    System.out.println("Valor de primerElemento: " + primerElemento);
+    System.out.println("Valor de posición cero: " + numerosPrimos[0]);
+                                </code></pre>
+                            </div>
+                            <p class="fs-5 mb-4">
+                                Teniendo como salida lo siguiente:
+                            </p>
+
+                            <div class="code-example">
+                                <pre><samp class="code">
+    Valor de primerElemento: 2
+    Valor de posición cero: 2
+                                </samp></pre>
+                            </div>
+
+                            <p class="fs-5 mb-4">
+                                Así podremos obtener los valores almacenados en las diferentes posiciones de nuestro
+                                arreglo, hay que tener cuidado de que la posición que especifiquemos realmente exista, o
+                                tendremos como resultado una excepción de tipo ArrayIndexOutOfBoundsException.
+                            </p>
+                        </section>
+
+                        <section class="mb-5">
+                            <h3 class="fw-c mb-4 mt-5">Modificación de Arreglos</h3>
+                            <p class="fs-5 mb-4">
+                                La modificación de los arreglos, consiste en alterar la información almacenada en las
+                                diversas posiciones que contenga. El tamaño del arreglo que fue establecido al momento
+                                de su creación no puede ser modificado.
+                            </p>
+
+                            <p class="fs-5 mb-4">
+                                Retomaremos el arreglo de vocales para realizar la modificación de la información:
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    Character[] vocales = {'a', 'e', 'i', 'o', 'u'};
+                                </code></pre>
+                            </div>
+
+                            <p class="fs-5 mb-4">
+                                Vamos a modificar el dato que contiene la celda en la posición 2 del arreglo.
+                                Actualmente vocales[2] contiene el valor 'i', lo cambiaremos por 'x'.
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    vocales[2] = 'x';
+                                </code></pre>
+                            </div>
+                            <p class="fs-5 mb-4">
+                                ¡Listo! Basta con especificar el nombre del arreglo y entre corchetes la posición a la
+                                cual queremos acceder y asignarle un nuevo valor. Este valor debe de ser el mismo que el
+                                tipo de dato con el cual se definió el arreglo.
+                            </p>
+
+                            <p class="fs-5 mb-4">
+                                Si accedemos ahora a esa posición, notaremos que tiene el valor de 'x' que le acabamos
+                                de asignar.
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    System.out.println("Valor de posición dos: " + vocales[2]);
+                                </code></pre>
+                            </div>
+                            <p class="fs-5 mb-4">
+                                Teniendo como salida:
+                            </p>
+
+                            <div class="code-example">
+                                <pre><samp class="code">
+    Valor de posición dos: x
+                                </samp></pre>
+                            </div>
+
+                            <p class="fs-5 mb-4">
+                                Así de sencillo podemos modificar la información de nuestros arreglos.
+                            </p>
+
+                        </section>
+
+                        <section class="mb-5">
+                            <h3 class="fw-c mb-4 mt-5">Iteración de Arreglos</h3>
+
+                            <p class="fs-5 mb-4">
+                                También es posible recorrer los arreglos de principio a fin, obteniendo el valor
+                                contenido en cada una de sus celdas, a esto se le conoce como iteración, y se realiza a
+                                través de secuencias de control repetitivas. Veremos un ejemplo con el ciclo for, que es
+                                el más común.
+                            </p>
+                            <div class="code-example">
+                                <pre>
+                                <code class="code">
+    for(int i=0; i < vocales.length; i++) {
+        System.out.println("Elemento: " + vocales[i]);
+    }
+                                </code></pre>
+                            </div>
+                            <p class="fs-5 mb-4">
+                                Al ejecutar el código anterior, tendremos el siguiente resultado:
+                            </p>
+
+                            <div class="code-example">
+                                <pre><samp class="code">
+    Elemento: a
+    Elemento: e
+    Elemento: x
+    Elemento: o
+    Elemento: u
+                                </samp></pre>
+                            </div>
+
+                            <p class="fs-5 mb-4">
+                                En el ciclo for estamos inicializando la variable i con el valor de cero, para empezar
+                                en la primer posición del arreglo, las iteraciones terminarán mientras i sea menor a la
+                                longitud del arreglo, este valor es el tamaño con el que lo creamos, en este caso es 5,
+                                por lo tanto el ciclo terminará cuando el valor de i ya no cumpla esa condición. Y el
+                                incremento va de uno en uno. De esta forma recorremos completamente el arreglo e
+                                imprimimos su valor en consola.
+                            </p>
                         </section>
 
 
                         <section class="mb-5">
                             <h2 class="fw-bolder mb-4 mt-5">Conclusión</h2>
                             <p class="fs-5 mb-4">
-                                Con el manejo de excepciones tenemos la posibilidad de manejar los errores que
-                                puedan
-                                ocurrir al momento de ejecutar nuestros programas para evitar que se detengan,
-                                además de
-                                que
-                                gracias a esto, las aplicaciones son más tolerantes a fallas y muestran un mejor
-                                comportamiento hacia los usuarios.
+                                Los arreglos son una estructura de datos compuesta que nos permite almacenar información
+                                del mismo tipo de dato con la finalidad de agruparla y de utilizarla posteriormente. Es
+                                posible realizar diferentes operaciones sobre ellos, como es la creación, la lectura y
+                                la modificación.
                             </p>
-                        </section>
-
-                        <section class="mb-5">
-                            <h6 class="fw-bolder mb-4 mt-5">El código lo podrás encontrar en nuestro <a
-                                    href="https://github.com/codigazosit/arreglos">repositorio
-                                    de GitHub</a></h6>
-
                         </section>
 
                         <section class="mb-5">
