@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Post: Modificadores de acceso" />
+    <meta name="author" content="codigazosit" />
+    <title>Modificadores de acceso - Codigazos IT</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./../../assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./../../css/styles.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDMFWEHLSX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RDMFWEHLSX');
+    </script>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./../../index.html">Codigazos IT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./../../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/about.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Modificadores de acceso</h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">Publicado el 28 de Septiembre, 2021</div>
+                        <!-- Post categories-->
+                        <a class="badge bg-secondary text-decoration-none link-light">Java</a>
+                        <a class="badge bg-secondary text-decoration-none link-light">Programación Orientada a
+                            Objetos</a>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/java/modificadores-de-acceso/header-cover.png"
+                            alt="¿Qué es la programación?" /></figure>
+                    <div class="text-muted fst-italic mb-4">Tiempo de lectura aproximado: 15 minutos.</div>
+                    <!-- Introduction-->
+                    <section class="mb-5">
+                        En este artículo vamos a explicarte qué son los modificadores de acceso y para qué son
+                        utilizados. Además, te compartiremos la funcionalidad que tiene cada uno de ellos.
+                    </section>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">Los <i>modificadores de acceso</i> son aquellas palabras reservadas que nos permiten especificar la <b>accesibilidad</b> de un miembro o un tipo. Estos pueden ser variables, métodos, clases, entre algunos otros. Con ellos, podemos definir el nivel de visibilidad y accesibilidad que tendrán dentro del programa.</p>
+                        <p class="fs-5 mb-4">Son la base de la <b>encapsulación en la Programación Orientada a Objetos</b> para restringir el acceso a los miembros de las clases, evitando el mal uso de las propiedades. </p>
+                        <p class="fs-5 mb-4"><b>¿Cuáles son los modificadores de acceso?</b></p>
+                        <p class="fs-5 mb-4">En Java tenemos 4: <b><i>public, private, protected y package.</i></b></p>
+
+                        <h4 class="fw-bolder mb-4 mt-5">public</h4>
+                        <p class="fs-5 mb-4">El modificador de acceso <i>public</i>, permite que los miembros sean accesibles desde cualquier parte del programa, este es el menos restrictivo.</p>
+                        <p class="fs-5 mb-4">En algunas definiciones, este es el modificador de acceso por defecto. Puede ser aplicado en <b>clases, clases anidadas, métodos, propiedades y constructores.</b></p>
+                        <p class="fs-5 mb-4">Te compartimos un ejemplo de su uso:</p>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    <b>public</b> class Ejemplo {
+        <b>public</b> String instagram = "@codigazosit";
+
+        <b>public</b> void mostrarInstagram() {
+            System.out.println("Síguenos en " + instagram);
+        }
+    }
+                            </code></pre>
+                        </div>
+
+                        <p class="fs-5 mb-4">También, los métodos definidos en las interfaces son por defecto públicos, aunque no sea declarado explícitamente, los siguientes dos ejemplos representan lo mismo.</p>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    interface MiInterface {
+        <b>public</b> void saludar();
+    }
+                            </code></pre>
+                        </div>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    interface MiInterface {
+        void saludar();
+    }
+                            </code></pre>
+                        </div>
+                        <p class="fs-5 mb-4">Un comportamiento similar ocurre en los constructores por defecto de nuestras clases, que también es público.</p>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    <b>public</b> class MiClase {
+        <b>public</b> MiClase() {
+            //Instrucciones
+        }
+    }
+                            </code></pre>
+                        </div>
+
+                        <h4 class="fw-bolder mb-4 mt-5">private</h4>
+
+                        <p class="fs-5 mb-4">Caso contrario a <i>public</i>, el modificador de acceso <i>private</i> es el más <b>restrictivo</b> de todos. Únicamente permite la visualización de los miembros dentro de la clase en la cual fueron definidos. Si alguna otra clase intenta acceder a ellos, generará un <b>error de compilación</b>, ya que no son visibles. </p>
+                        <p class="fs-5 mb-4">Este debe de ser declarado explícitamente con la palabra reservada <b><i>private</i></b>, ya que no hay miembros que por defecto se declaren como privados.</p>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    public class Ejemplo { 
+        <b>private</b> Integer numeroPrimo = 11;
+    }
+                            </code></pre>
+                        </div>
+
+                        <p class="fs-5 mb-4">De esta forma, la variable <i>numeroPrimo</i> solamente puede ser accedida desde la clase <i>Ejemplo</i>.</p>
+                        <p class="fs-5 mb-4">Una restricción del lenguaje con respecto al modificador de acceso <i>private</i>, es que no es posible declarar clases privadas a menos que se encuentren dentro de otra clase:</p>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    <b>public</b> class Ejemplo { 
+        private Integer numeroPrimo = 11;
+
+        <b>private</b> class Ejemplo2 {
+            //Instrucciones
+        }
+    }
+                            </code></pre>
+                        </div>
+                        <p class="fs-5 mb-4">Los métodos definidos en las <i>interfaces</i> tampoco pueden ser declarados con <i>private</i>.</p>
+
+                        <p class="fs-5 mb-4">Además, existe un comportamiento particular cuando declaramos constructores como privados. Al hacerlo, no es posible crear instancias de la clase a través de ese constructor.</p>
+
+                        <div class="code-example">
+                            <pre><code class="code">
+    public class Persona {
+        private String nombre;
+        private Integer edad;
+    
+        <b>private</b> Persona() {
+            //No es posible crear instancias con este constructor privado
+        }
+    
+        public Persona(String nombre, Integer edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+    }                            
+                            </code></pre>
+                        </div>
+                        <h4 class="fw-bolder mb-4 mt-5">protected</h4>
+
+                        <p class="fs-5 mb-4">Este modificador de acceso nos permite darle visibilidad a los miembros que se encuentren dentro del mismo paquete y a las subclases (incluso si las subclases están en otro paquete).</p>
+                        <p class="fs-5 mb-4">De la misma forma que <i>private</i>, debe ser definido explícitamente y puede ser aplicado a propiedades, métodos, constructores y clases anidadas.</p>
+
+                        <div class="code-example">
+                            <pre><code class="code">
+   <b>package common;</b>
+
+   public class Funciones {
+   
+       <b>protected</b> Funciones() {
+           // Solamente se pueden crear instancias en clases
+           // que se encuentren en el mismo paquete (en este caso: common)
+       }
+   
+       <b>protected</b> Double sumar(Double x, Double y) {
+           return x + y;
+       }
+   }                   
+                            </code></pre>
+                        </div>
+                        <p class="fs-5 mb-4">Si queremos acceder al método <b><i>sumar()</i></b> desde una clase hija, será posible si está definido con <i>protected</i>. </p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    <b>package main;</b>
+    
+    import common.Funciones;
+
+    public class Operadores extends Funciones {
+
+        public Double sumar(Double x, Double y) {
+            return super.sumar(x, y);
+        }
+    }                    
+                            </code></pre>
+                        </div>
+
+                        <p class="fs-5 mb-4">Puedes notar que los paquetes donde se encuentran ambas clases son diferentes.</p>
+
+                        <p class="fs-5 mb-4">Los métodos abstractos <b>sí</b> pueden ser declarados como <i>protected</i>, algo que en las interfaces no es posible.</p>
+                        <div class="code-example">
+                            <pre><code class="code">
+    abstract class Animal {
+        <b>protected</b> abstract void comer();
+    }                          
+                            </code></pre>
+                        </div>
+
+
+                        <h4 class="fw-bolder mb-4 mt-5">package</h4>
+                        <p class="fs-5 mb-4">Este modificador de acceso es el que se declara por defecto cuando no definimos uno explícitamente, también es conocido como <i>default o default package.</i></p>
+                        <p class="fs-5 mb-4">Su funcionalidad es muy similar a la de <i>protected</i>, con la diferencia de que package <b>no puede acceder a los miembros heredados</b>.</p>
+                        <p class="fs-5 mb-4">Un miembro tiene este modificador de acceso en el momento en el que no definimos alguno de los otros tres (salvo en los cuales public es el declarado por defecto).</p>
+                        <p class="fs-5 mb-4">Puede ser aplicado a propiedades, clases, métodos, constructores y clases anidadas.</p>
+
+                        <div class="code-example">
+                            <pre><code class="code">
+    class Animal {
+        // Creamos una clase sin modificador de acceso, por lo cual toma default 
+        // y es visible desde el mismo paquete.
+
+        //Creamos una variable que es accesible desde el mismo paquete en el que se encuentre la clase.
+        String nombre;
+
+        //Creamos un método que es accesible desde el mismo paquete en el que se encuentre la clase.
+        void comer() {
+            //Instrucciones
+        }
+
+        // Definimos una clase anidada que es accesible desde el mismo paquete en
+        // el que se encuentre la clase padre.
+        class Alimentos {
+            //Propiedades, métodos, etc.
+        }
+    }                          
+                            </code></pre>
+                        </div>
+
+                    </section>
+
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Conclusión</h2>
+                        <p class="fs-5 mb-4">Cada modificador de acceso tiene un uso diferente como hemos visto, utilizarlos adecuadamente en base a nuestras necesidades nos facilitará darle mantenimiento a nuestras aplicaciones y a darles un uso adecuado a los miembros para los cuales fueron creados.</p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bolder mb-4 mt-5">No olvides visitar nuestra cuenta de Instagram <a
+                                href="https://www.instagram.com/codigazosit/">@codigazosit</a></h5>
+                        <p class="fs-5 mb-4">
+                            Te compartimos el post de este artículo por si tienes alguna duda o comentario.
+                        </p>
+                        <p class="fs-5 mb-4">
+                            <a href="https://www.instagram.com/p/CSHQuCDn3nu/">
+                                <figure class="mb-4">
+                                    <img class="img-fluid rounded"
+                                        src="./../../assets/images/posts/java/modificadores-de-acceso/post-cover.jpg"
+                                        alt="Instagram Post: Modificadores de acceso">
+                                </figure>
+                            </a>
+                        </p>
+                    </section>
+
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">
+                            ¡Muchas gracias por tu visita!
+                        </p>
+                    </section>
+                </article>
+
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Sitios externos</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://github.com/codigazosit/">GitHub</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Donaciones</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.buymeacoffee.com/codigazosit/">Buy Me a Coffee</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Codigazos IT 2021</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="./../../js/scripts.js"></script>
+</body>
+
+</html>
