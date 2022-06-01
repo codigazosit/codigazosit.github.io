@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8477470809102387"
+        crossorigin="anonymous"></script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Post: Modificadores de acceso" />
@@ -11,10 +14,6 @@
     <link rel="icon" type="image/x-icon" href="./../../assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./../../css/styles.css" rel="stylesheet" />
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8477470809102387"
-        crossorigin="anonymous"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDMFWEHLSX"></script>
@@ -142,7 +141,8 @@
                             dentro de la clase en la cual fueron definidos. Si alguna otra clase intenta acceder a
                             ellos, generará un <b>error de compilación</b>, ya que no son visibles. </p>
                         <p class="fs-5 mb-4">Este debe de ser declarado explícitamente con la palabra reservada
-                            <b><i>private</i></b>, ya que no hay miembros que por defecto se declaren como privados.</p>
+                            <b><i>private</i></b>, ya que no hay miembros que por defecto se declaren como privados.
+                        </p>
                         <div class="code-example">
                             <pre>
                             <code class="code">
@@ -156,7 +156,8 @@
                             desde la clase <i>Ejemplo</i>.</p>
                         <p class="fs-5 mb-4">Una restricción del lenguaje con respecto al modificador de acceso
                             <i>private</i>, es que no es posible declarar clases privadas a menos que se encuentren
-                            dentro de otra clase:</p>
+                            dentro de otra clase:
+                        </p>
                         <div class="code-example">
                             <pre>
                             <code class="code">
@@ -239,7 +240,8 @@
                             diferentes.</p>
 
                         <p class="fs-5 mb-4">Los métodos abstractos <b>sí</b> pueden ser declarados como
-                            <i>protected</i>, algo que en las interfaces no es posible.</p>
+                            <i>protected</i>, algo que en las interfaces no es posible.
+                        </p>
                         <div class="code-example">
                             <pre><code class="code">
     abstract class Animal {
