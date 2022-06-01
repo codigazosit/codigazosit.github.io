@@ -12,6 +12,10 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./../../css/styles.css" rel="stylesheet" />
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8477470809102387"
+        crossorigin="anonymous"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDMFWEHLSX"></script>
     <script>
@@ -69,14 +73,22 @@
                     </section>
                     <!-- Post content-->
                     <section class="mb-5">
-                        <p class="fs-5 mb-4">Los <i>modificadores de acceso</i> son aquellas palabras reservadas que nos permiten especificar la <b>accesibilidad</b> de un miembro o un tipo. Estos pueden ser variables, métodos, clases, entre algunos otros. Con ellos, podemos definir el nivel de visibilidad y accesibilidad que tendrán dentro del programa.</p>
-                        <p class="fs-5 mb-4">Son la base de la <b>encapsulación en la Programación Orientada a Objetos</b> para restringir el acceso a los miembros de las clases, evitando el mal uso de las propiedades. </p>
+                        <p class="fs-5 mb-4">Los <i>modificadores de acceso</i> son aquellas palabras reservadas que nos
+                            permiten especificar la <b>accesibilidad</b> de un miembro o un tipo. Estos pueden ser
+                            variables, métodos, clases, entre algunos otros. Con ellos, podemos definir el nivel de
+                            visibilidad y accesibilidad que tendrán dentro del programa.</p>
+                        <p class="fs-5 mb-4">Son la base de la <b>encapsulación en la Programación Orientada a
+                                Objetos</b> para restringir el acceso a los miembros de las clases, evitando el mal uso
+                            de las propiedades. </p>
                         <p class="fs-5 mb-4"><b>¿Cuáles son los modificadores de acceso?</b></p>
                         <p class="fs-5 mb-4">En Java tenemos 4: <b><i>public, private, protected y package.</i></b></p>
 
                         <h4 class="fw-bolder mb-4 mt-5">public</h4>
-                        <p class="fs-5 mb-4">El modificador de acceso <i>public</i>, permite que los miembros sean accesibles desde cualquier parte del programa, este es el menos restrictivo.</p>
-                        <p class="fs-5 mb-4">En algunas definiciones, este es el modificador de acceso por defecto. Puede ser aplicado en <b>clases, clases anidadas, métodos, propiedades y constructores.</b></p>
+                        <p class="fs-5 mb-4">El modificador de acceso <i>public</i>, permite que los miembros sean
+                            accesibles desde cualquier parte del programa, este es el menos restrictivo.</p>
+                        <p class="fs-5 mb-4">En algunas definiciones, este es el modificador de acceso por defecto.
+                            Puede ser aplicado en <b>clases, clases anidadas, métodos, propiedades y constructores.</b>
+                        </p>
                         <p class="fs-5 mb-4">Te compartimos un ejemplo de su uso:</p>
                         <div class="code-example">
                             <pre>
@@ -91,7 +103,9 @@
                             </code></pre>
                         </div>
 
-                        <p class="fs-5 mb-4">También, los métodos definidos en las interfaces son por defecto públicos, aunque no sea declarado explícitamente, los siguientes dos ejemplos representan lo mismo.</p>
+                        <p class="fs-5 mb-4">También, los métodos definidos en las interfaces son por defecto públicos,
+                            aunque no sea declarado explícitamente, los siguientes dos ejemplos representan lo mismo.
+                        </p>
                         <div class="code-example">
                             <pre>
                             <code class="code">
@@ -108,7 +122,8 @@
     }
                             </code></pre>
                         </div>
-                        <p class="fs-5 mb-4">Un comportamiento similar ocurre en los constructores por defecto de nuestras clases, que también es público.</p>
+                        <p class="fs-5 mb-4">Un comportamiento similar ocurre en los constructores por defecto de
+                            nuestras clases, que también es público.</p>
                         <div class="code-example">
                             <pre>
                             <code class="code">
@@ -122,8 +137,12 @@
 
                         <h4 class="fw-bolder mb-4 mt-5">private</h4>
 
-                        <p class="fs-5 mb-4">Caso contrario a <i>public</i>, el modificador de acceso <i>private</i> es el más <b>restrictivo</b> de todos. Únicamente permite la visualización de los miembros dentro de la clase en la cual fueron definidos. Si alguna otra clase intenta acceder a ellos, generará un <b>error de compilación</b>, ya que no son visibles. </p>
-                        <p class="fs-5 mb-4">Este debe de ser declarado explícitamente con la palabra reservada <b><i>private</i></b>, ya que no hay miembros que por defecto se declaren como privados.</p>
+                        <p class="fs-5 mb-4">Caso contrario a <i>public</i>, el modificador de acceso <i>private</i> es
+                            el más <b>restrictivo</b> de todos. Únicamente permite la visualización de los miembros
+                            dentro de la clase en la cual fueron definidos. Si alguna otra clase intenta acceder a
+                            ellos, generará un <b>error de compilación</b>, ya que no son visibles. </p>
+                        <p class="fs-5 mb-4">Este debe de ser declarado explícitamente con la palabra reservada
+                            <b><i>private</i></b>, ya que no hay miembros que por defecto se declaren como privados.</p>
                         <div class="code-example">
                             <pre>
                             <code class="code">
@@ -133,8 +152,11 @@
                             </code></pre>
                         </div>
 
-                        <p class="fs-5 mb-4">De esta forma, la variable <i>numeroPrimo</i> solamente puede ser accedida desde la clase <i>Ejemplo</i>.</p>
-                        <p class="fs-5 mb-4">Una restricción del lenguaje con respecto al modificador de acceso <i>private</i>, es que no es posible declarar clases privadas a menos que se encuentren dentro de otra clase:</p>
+                        <p class="fs-5 mb-4">De esta forma, la variable <i>numeroPrimo</i> solamente puede ser accedida
+                            desde la clase <i>Ejemplo</i>.</p>
+                        <p class="fs-5 mb-4">Una restricción del lenguaje con respecto al modificador de acceso
+                            <i>private</i>, es que no es posible declarar clases privadas a menos que se encuentren
+                            dentro de otra clase:</p>
                         <div class="code-example">
                             <pre>
                             <code class="code">
@@ -147,9 +169,12 @@
     }
                             </code></pre>
                         </div>
-                        <p class="fs-5 mb-4">Los métodos definidos en las <i>interfaces</i> tampoco pueden ser declarados con <i>private</i>.</p>
+                        <p class="fs-5 mb-4">Los métodos definidos en las <i>interfaces</i> tampoco pueden ser
+                            declarados con <i>private</i>.</p>
 
-                        <p class="fs-5 mb-4">Además, existe un comportamiento particular cuando declaramos constructores como privados. Al hacerlo, no es posible crear instancias de la clase a través de ese constructor.</p>
+                        <p class="fs-5 mb-4">Además, existe un comportamiento particular cuando declaramos constructores
+                            como privados. Al hacerlo, no es posible crear instancias de la clase a través de ese
+                            constructor.</p>
 
                         <div class="code-example">
                             <pre><code class="code">
@@ -170,8 +195,11 @@
                         </div>
                         <h4 class="fw-bolder mb-4 mt-5">protected</h4>
 
-                        <p class="fs-5 mb-4">Este modificador de acceso nos permite darle visibilidad a los miembros que se encuentren dentro del mismo paquete y a las subclases (incluso si las subclases están en otro paquete).</p>
-                        <p class="fs-5 mb-4">De la misma forma que <i>private</i>, debe ser definido explícitamente y puede ser aplicado a propiedades, métodos, constructores y clases anidadas.</p>
+                        <p class="fs-5 mb-4">Este modificador de acceso nos permite darle visibilidad a los miembros que
+                            se encuentren dentro del mismo paquete y a las subclases (incluso si las subclases están en
+                            otro paquete).</p>
+                        <p class="fs-5 mb-4">De la misma forma que <i>private</i>, debe ser definido explícitamente y
+                            puede ser aplicado a propiedades, métodos, constructores y clases anidadas.</p>
 
                         <div class="code-example">
                             <pre><code class="code">
@@ -190,7 +218,8 @@
    }                   
                             </code></pre>
                         </div>
-                        <p class="fs-5 mb-4">Si queremos acceder al método <b><i>sumar()</i></b> desde una clase hija, será posible si está definido con <i>protected</i>. </p>
+                        <p class="fs-5 mb-4">Si queremos acceder al método <b><i>sumar()</i></b> desde una clase hija,
+                            será posible si está definido con <i>protected</i>. </p>
                         <div class="code-example">
                             <pre><code class="code">
     <b>package main;</b>
@@ -206,9 +235,11 @@
                             </code></pre>
                         </div>
 
-                        <p class="fs-5 mb-4">Puedes notar que los paquetes donde se encuentran ambas clases son diferentes.</p>
+                        <p class="fs-5 mb-4">Puedes notar que los paquetes donde se encuentran ambas clases son
+                            diferentes.</p>
 
-                        <p class="fs-5 mb-4">Los métodos abstractos <b>sí</b> pueden ser declarados como <i>protected</i>, algo que en las interfaces no es posible.</p>
+                        <p class="fs-5 mb-4">Los métodos abstractos <b>sí</b> pueden ser declarados como
+                            <i>protected</i>, algo que en las interfaces no es posible.</p>
                         <div class="code-example">
                             <pre><code class="code">
     abstract class Animal {
@@ -219,10 +250,15 @@
 
 
                         <h4 class="fw-bolder mb-4 mt-5">package</h4>
-                        <p class="fs-5 mb-4">Este modificador de acceso es el que se declara por defecto cuando no definimos uno explícitamente, también es conocido como <i>default o default package.</i></p>
-                        <p class="fs-5 mb-4">Su funcionalidad es muy similar a la de <i>protected</i>, con la diferencia de que package <b>no puede acceder a los miembros heredados</b>.</p>
-                        <p class="fs-5 mb-4">Un miembro tiene este modificador de acceso en el momento en el que no definimos alguno de los otros tres (salvo en los cuales public es el declarado por defecto).</p>
-                        <p class="fs-5 mb-4">Puede ser aplicado a propiedades, clases, métodos, constructores y clases anidadas.</p>
+                        <p class="fs-5 mb-4">Este modificador de acceso es el que se declara por defecto cuando no
+                            definimos uno explícitamente, también es conocido como <i>default o default package.</i></p>
+                        <p class="fs-5 mb-4">Su funcionalidad es muy similar a la de <i>protected</i>, con la diferencia
+                            de que package <b>no puede acceder a los miembros heredados</b>.</p>
+                        <p class="fs-5 mb-4">Un miembro tiene este modificador de acceso en el momento en el que no
+                            definimos alguno de los otros tres (salvo en los cuales public es el declarado por defecto).
+                        </p>
+                        <p class="fs-5 mb-4">Puede ser aplicado a propiedades, clases, métodos, constructores y clases
+                            anidadas.</p>
 
                         <div class="code-example">
                             <pre><code class="code">
@@ -252,7 +288,10 @@
 
                     <section class="mb-5">
                         <h2 class="fw-bolder mb-4 mt-5">Conclusión</h2>
-                        <p class="fs-5 mb-4">Cada modificador de acceso tiene un uso diferente como hemos visto, utilizarlos adecuadamente en base a nuestras necesidades nos facilitará darle mantenimiento a nuestras aplicaciones y a darles un uso adecuado a los miembros para los cuales fueron creados.</p>
+                        <p class="fs-5 mb-4">Cada modificador de acceso tiene un uso diferente como hemos visto,
+                            utilizarlos adecuadamente en base a nuestras necesidades nos facilitará darle mantenimiento
+                            a nuestras aplicaciones y a darles un uso adecuado a los miembros para los cuales fueron
+                            creados.</p>
                     </section>
 
                     <section class="mb-5">
