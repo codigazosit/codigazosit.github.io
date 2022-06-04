@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8477470809102387"
+        crossorigin="anonymous"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Post: Jetpack: DataBinding" />
+    <meta name="author" content="codigazosit" />
+    <title>Jetpack: DataBinding - Primeros pasos - Codigazos IT</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./../../css/styles.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDMFWEHLSX"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RDMFWEHLSX');
+    </script>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./../../index.html">Codigazos IT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./../../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/about.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../../info/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Jetpack: DataBinding - Primeros pasos</h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">Publicado el 07 de Junio, 2022</div>
+                        <!-- Post categories-->
+                        <a class="badge bg-secondary text-decoration-none link-light">Android</a>
+                        <a class="badge bg-secondary text-decoration-none link-light">Jetpack</a>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/header-cover.png"
+                            alt="Jetpack: DataBinding" />
+                    </figure>
+                    <div class="text-muted fst-italic mb-4">Tiempo de lectura aproximado: 20 minutos.</div>
+
+                    <!-- Introduction-->
+                    <section class="mb-5">
+                        En este artículo vamos a explicarte qué es DataBinding, cómo lo puedes utilizar y en qué favorese su uso en tus aplicaciones móviles Android.
+                    </section>
+                    <!-- Post content-->
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">DataBinding es una librería de Jetpack, que nos permite enlazar los componentes de la UI con los conjuntos de datos para tu aplicación, reduciendo el código y las posibilidades de error al enlazar componentes de las vistas a través de programación.</p>
+
+                        <h3 class="fw-c mb-4 mt-5">Ventajas de utilizar DataBinding</h3>
+
+                            <ul>
+                                <li><p class="fs-5 mb-4">Se elimina el uso del método findViewById(), por lo que no existirán errores en tiempo de ejecución por una referencia no existente.</p></li>
+                                <li><p class="fs-5 mb-4">Mantiene el código más limpio ya que se enlaza la información en el XML de las vistas.</p></li>
+                                <li><p class="fs-5 mb-4">Los datos se actualizan automáticamente ya que provee clases y métodos que observan los cambios efectuados en ellos.</p></li>
+                                <li><p class="fs-5 mb-4">Se reduce la cantidad de llamadas a los métodos que controlan la UI cuando existe un cambio en los datos.</p></li>
+                            </ul>
+                        </p>
+
+                        <p class="fs-5 mb-4">Te mostraremos cómo implementarlo con un proyecto nuevo creado en Android Studio para la explicación. También puedes encontrarlo en GitHub, encontrarás en enlace al final del artículo.</p>
+
+                    </section>
+                    <section class="mb-5">
+                        <h3 class="fw-c mb-4 mt-5">Creando proyecto nuevo en Android Studio</h3>
+
+                        <p class="fs-5 mb-4">Comenzemos creando un nuevo proyecto haciendo clic en <i>New Proyect</i></p>
+                        <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/create-new-project-1.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+
+                        <p class="fs-5 mb-4">Seleccionaremos la opción <i>No Activity</i> y damos clic en <i>Next</i></p>
+                        <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/create-new-project-2.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+                        <p class="fs-5 mb-4">Llenamos la información para el nombre del proyecto con <i>DataBindingPrimerosPasos</i>, el nombre del paquete y el directorio donde guardaremos el proyecto. Para este ejemplo utilizaremos Kotlin y el API v30. Damos clic en <i>Finish</i> y esperamos a que se construya el proyecto.</p>
+                        <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/create-new-project-3.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+                    </section>
+
+                        <section class="mb-5">
+
+                        <h5 class="fw-c mb-4 mt-5">¿Cómo utilizar DataBinding?</h5>
+
+                        <p class="fs-5 mb-4">En todas tus aplicaciones de Android (o al menos la mayoría), es recomendable utilizar la última versión de gradle. <b> Para poder utilizar dataBinding, la versión de gradle debe de ser 1.5.0 o mayor.</b></p>
+
+                        <p class="fs-5 mb-4">Ahora debemos de activarlo en nuestro archivo <i>build.gradle</i> en el módulo de la aplicación como se muestra en el siguiente ejemplo:</p>
+
+                        <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/add-databinding-1.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+
+                        <p class="fs-5 mb-4">Agregamos el siguiente fragmento de instrucciones dentro de <i>android</i></p>
+                        <div class="code-example">
+                            <pre>
+                            <code class="code">
+    android {
+        …
+        buildFeatures {
+            dataBinding true
+        }
+    }
+                            </code></pre>
+                        </div>
+
+                        <p class="fs-5 mb-4">Construímos el proyecto y con esto es suficiente para empezar a utilizarlo.</p>
+
+                        <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/add-databinding-2.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+
+                    </section>
+
+                    <section class="mb-5">
+
+
+                        <h5>Crear una nueva Activity con un TextView</h5>
+                        <p class="fs-5 mb-4">Comenzaremos por crear una nueva <i>Activity</i> en nuestro proyecto. El proceso para crearla es <i>clic derecho en app -> New -> Activity -> Empty Activity</i></p>
+                        <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/create-activity-1.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+
+                        <p class="fs-5 mb-4">La nombramos como <i>MainActivity</i> y Android Studio nos autocompleta el nombre del archivo xml como <i>activity_main.xml</i> y damos clic en <i>Finish.</i></p>
+                                                <figure class="mb-4 w-75"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/create-activity-2.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+
+                        <h5>Primeros pasos con DataBinding</h5>
+
+                        <p class="fs-5 mb-4">La forma habitual de enlazar una vista de nuestro xml llamado <i>activity_main.xml</i> y nuestra clase <i>MainActivity.kt</i> sin utilizar DataBinding es utilizando el método findViewById(). Veamos cómo lo hacemos a través de DataBinding.</p>
+                        <p class="fs-5 mb-4">Primero debemos agregar en el archivo <i>activity_main.xml</i> las etiquetas &ltlayout> al inicio y al fin de todo el archivo y mover las anotaciones xmlns dentro de &ltlayout>, también agregaremos un TextView dentro del ConstraintLayout para mostrar un texto, como se muestra en el siguiente ejemplo:</p>
+                        
+                            <div class="code-example">
+                                <pre lang="xml"><code class="code">
+    &ltlayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+ 
+        &ltandroidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                                    
+            &ltTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="24sp" />
+                                    
+        &lt/androidx.constraintlayout.widget.ConstraintLayout>
+ 
+    &lt/layout>         
+                                </code></pre>
+                            </div>
+
+                            <p class="fs-5 mb-4">Cuando anidamos el contenido entre las etiquetas <i>&ltlayout> y &lt/layout></i> en nuestro archivo xml, <b> se generará una clase automáticamente basada en el nombre de nuestro archivo en notación Pascal y agregando el sufijo Binding.</b> Por lo que para nuestro archivo llamado activiy_main.xml, se generará una clase llamada <i>ActivityMainBinding</i>, que contendrá toda la información y propiedades declaradas en el archivo <i>activity_main.xml</i>. Retomaremos esto más adelante.</p>
+                            <p class="fs-5 mb-4">Ahora agregaremos a nuestro xml un par de expresiones que harán funcionar DataBinding, debajo de nuestra etiqueta layout agregaremos un nodo <i>&ltdata></i> como se muestra en el ejemplo:</p>
+                            <div class="code-example">
+                                <pre lang="xml"><code class="code">
+    &ltdata>
+        &ltvariable name="greeting" type="String"/>
+    &lt/data>       
+                                </code></pre>
+                            </div>        
+
+
+                            <p class="fs-5 mb-4">Este nodo <i>data</i>, generará en nuestra clase <i>ActivityMainBinding</i> una variable a la que podremos asignarle un valor desde código y DataBinding hará el resto para enlazarlo. Aquí definimos una variable llamada <i>greeting</i>, de tipo String. Para mostrar ese valor en nuestro <i>TextView</i>, agregaremos en la propiedad <b>android:text</b> la siguiente expresión:</p>
+
+                            <div class="code-example">
+                                <pre lang="xml"><code class="code">
+    &ltTextView android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          …
+          android:text="@{greeting}" />
+                                </code></pre>
+                            </div>   
+
+                            <p class="fs-5 mb-4"><b>Las expresiones de DataBinding usan la sintaxis @{}</b> y dentro de las llaves la variable definida dentro del nodo data, en este caso, llamada greeting.</p>
+
+                            <h5>Enlazando xml con nuestra MainActivity.kt</h5>
+
+                            <p class="fs-5 mb-4">Como mencionamos anteriormente, se generó una clase llamada <i>ActivityMainBinding</i> automáticamente al momento de colocar las etiquetas <i>&ltlayout></i> en nuestro xml. Ahora hay que enlazar nuestra MainActivity con ella para poder acceder a las propiedades de nuestro archivo activity_main.xml.</p>
+
+                            <p class="fs-5 mb-4">Dentro del método <i><b>onCreate()</b></i> crearemos una variable de tipo <i>ActivityMainBinding</i> de la siguiente manera:</p>
+
+                            <div class="code-example">
+                                <pre lang="xml"><code class="code">
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    
+        val binding : ActivityMainBinding = DataBindingUtil.setContentView(
+                this, R.layout.activity_main)
+    }    
+                                </code></pre>
+                            </div>   
+
+                            <p class="fs-5 mb-4">Con esta instrucción, estaremos enlazando la actividad actual con el <i>activity_main.xml</i>. ¿Y ahora cómo le envío un valor a la vista?</p>
+
+                            <h5>Enviando valores a través de DataBinding</h5>
+
+                            <p class="fs-5 mb-4">Nuestra variable <i>binding</i> ya cuenta con una referencia de las propiedades existentes en <i>activity_main.xml</i>, por lo que basta con acceder a sus atributos y asignar en la variable <i>greeting</i> (que fue la que anteriormente definimos dentro del nodo <i>&ltdata></i>) como se muestra en el siguiente ejemplo:</p>
+
+                            <div class="code-example">
+                                <pre lang="xml"><code class="code">
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    
+        val binding : ActivityMainBinding = DataBindingUtil.setContentView(
+                this, R.layout.activity_main)
+
+        binding.greeting = "Hola DataBinding"
+    }    
+                                </code></pre>
+                            </div>   
+
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Probando la aplicación</h2>
+                        <p class="fs-5 mb-4">Finalmente verificamos que en nuestro archivo <i>AndroidManifest.xml</i> exista la sección <i>&ltintent-filter></i> en nuestro <i>MainActivity</i> para ejecutarla al iniciar nuestra aplicación. Si en la creación del <i>Activity</i> no seleccionaste la casilla <i>Launcher Activity</i> este paso es necesario.</p>
+
+                        <div class="code-example">
+                            <pre lang="xml"><code class="code">
+    &ltactivity
+        android:name=".MainActivity"
+        android:exported="true">
+        &ltintent-filter>
+            &ltaction android:name="android.intent.action.MAIN" />
+            &ltcategory android:name="android.intent.category.LAUNCHER" />
+        &lt/intent-filter>
+    &lt/activity>
+}    
+                            </code></pre>
+                        </div>  
+
+                        <h5 class="fw-bolder mb-4 mt-5">Ejecutando en nuestro dispositivo Android</h5>
+                        <p class="fs-5 mb-4">Ya sea que pruebes la aplicación en un emulador o en un dispositivo físico, veremos el siguiente resultado: </p>
+                        <figure class="mb-4 w-25"><img class="img-fluid rounded"
+                            src="./../../assets/images/posts/android/jetpack-databinding-primeros-pasos/application-running-1.png"
+                            alt="Jetpack: DataBinding" />
+                        </figure>
+                    <h5 class="fw-bolder mb-4 mt-5">Puntos a tomar en cuenta</h5>
+                    <p class="fs-5 mb-4">Como habrás notado, en ningún momento utilizamos el método <i>findViewById()</i> para enviarle un valor a nuestro <i>TextView</i>, realmente ni siquiera fue necesario agregarle un <i>id</i> al <i>TextView</i>. Tampoco hemos usado algún método como <i>setText()</i> para mandar un valor a la vista.</p>   
+                    <p class="fs-5 mb-4">La clase generada <i>ActivityMainBinding</i> cuenta con la definición de las propiedades del archivo xml desde el cual fue generada. Esta clase se genera en automático cuando habilitamos DataBinding dentro del bloque <i>buildFeatures</i> en nuestro <i>build.gradle</i> y colocamos las etiquetas <i>&ltlayout> al inicio y al fin de nuestro layout.xml.</i></p>
+                        <p class="fs-5 mb-4">La clase generada <i>ActivityMainBinding</i> cuenta con la definición de las propiedades del archivo xml desde el cual fue generada. Esta clase se genera en automático cuando habilitamos DataBinding dentro del bloque <i>buildFeatures</i> en nuestro <i>build.gradle</i> y colocamos las etiquetas <i>&ltlayout> al inicio y al fin de nuestro activity_main.xml.</i></p>
+                    <p class="fs-5 mb-4">El nodo <i>&ltdata></i> cuenta con las variables y los tipos que serán utilizados y que la clase generada (<i>ActivityMainBinding</i>) tendrá como propiedades.</p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Conclusión</h2>
+                        <p class="fs-5 mb-4">DataBinding es una utilería perteneciente a <b>Jetpack</b> que facilita el mantenimiento y el acceso a los elementos definidos en los archivos xml.</p>
+                        <p class="fs-5 mb-4">Hemos utilizado DataBinding en nuestra MainActivity para mandar un valor a nuestra vista a un campo TextView de manera sencilla sin utilizar <i>findViewById().</i></p>
+
+                        <p class="fs-5 mb-4">Todo el código de este ejercicio lo puedes encontrar en nuestro repositorio de <a href="https://github.com/codigazosit/jetpack-databinding">GitHub</a></p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder mb-4 mt-5">Referencias</h2>
+                        <p class="fs-5 mb-4">Documentación Oficial de Jetpack / DataBinding: <a href="https://developer.android.com/jetpack/androidx/releases/databinding?hl=es-419">Enlace</a></p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bolder mb-4 mt-5">No olvides visitar nuestra cuenta de Instagram <a
+                                href="https://www.instagram.com/codigazosit/">@codigazosit</a></h5>
+
+                        <p class="fs-5 mb-4">Date una vuelta por el sitio, hay muchos temas interesantes que te gustarán.</p>
+
+                    </section>
+
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">
+                            ¡Muchas gracias por tu visita!
+                        </p>
+                    </section>
+                </article>
+
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Encuéntranos en nuestras redes</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.youtube.com/channel/UCgcfu3xnAETG3m15pyHrBcQ">Youtube</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://github.com/codigazosit/">GitHub</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.instagram.com/codigazosit/">Instagram</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.facebook.com/codigazosit">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://twitter.com/CodigazosIt">Twitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Donaciones</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://www.buymeacoffee.com/codigazosit/">Buy Me a Coffee</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Codigazos IT 2022</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="./../../js/scripts.js"></script>
+</body>
+
+</html>
