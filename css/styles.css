@@ -11282,7 +11282,6 @@ textarea.form-control-lg {
   background-image: url("./../assets/images/covers/info/contact/header-cover.png");
 }
 
-
 .social {
   font-size: 400%;
   margin: 2%;
@@ -11300,6 +11299,10 @@ textarea.form-control-lg {
 color: #333;
 }
 
+.youtube {
+  color: #c4302b
+}
+
 .code {
   color: #000;
   overflow-x: visible;
@@ -11308,4 +11311,12 @@ color: #333;
 
 .code-example{
   background-color: #e9ecef;
+}
+
+.bodyContent {
+  background-color: #FFF;
+}
+
+.post {
+  background-color: #BEF1FF;
 }
